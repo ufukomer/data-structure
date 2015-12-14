@@ -1,4 +1,4 @@
-### Data Structure — Linked Queue, Tree, Sorting Algorithm Speed Analysis
+### Data Structure — Queue, Tree, Sorting Algorithm Speed Analysis
 A university project created using JavaFX software platform. To have an idea about the project content, read below.
 
 #### Linked Queue
@@ -9,7 +9,7 @@ Program generates array of integers according to input then sort this array with
 
 ![charts](src/images/docs/charts.png)
 
-#### Unbalanced Tree
+#### Binary Tree
 Program generates array of integers then fill tree with those integer numbers.
 
 ![unbalanced-tree](src/images/docs/unbalanced_tree.png)
