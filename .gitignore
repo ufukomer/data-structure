@@ -1,7 +1,6 @@
 nbproject
 build
 dist
-!dist/Project.jar
 /build.xml
 /applet.policy
 /manifest.mf
