@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="420.0" prefWidth="600.0" snapToPixel="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="project.FXMLDocumentController">
+  <children>
+    <MenuBar fx:id="menuBar" layoutY="0.0" minHeight="16.0" prefHeight="29.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#changeTabToQueue" text="Queue" />
+            <MenuItem mnemonicParsing="false" onAction="#changeTabToSorting" text="Sorting" />
+            <MenuItem mnemonicParsing="false" onAction="#changeTabToTree" text="Tree" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#resetAll" text="Reset" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <TabPane fx:id="tabPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="391.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+      <tabs>
+        <Tab text="     Queue     ">
+          <content>
+            <AnchorPane id="Content" cache="false" minHeight="0.0" minWidth="0.0" mouseTransparent="false" pickOnBounds="true" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button fx:id="insertButton" layoutX="245.0" mnemonicParsing="false" onAction="#insertQueueData" prefWidth="55.0" text="Insert" AnchorPane.bottomAnchor="36.0" />
+                <Button id="" fx:id="deleteButton" layoutX="318.0" mnemonicParsing="false" onAction="#removeQueueData" prefWidth="55.000099999997474" text="Delete" AnchorPane.bottomAnchor="36.0" />
+                <TextArea fx:id="textArea" editable="false" focusTraversable="false" layoutX="82.0" mouseTransparent="false" prefWidth="437.0" visible="true" wrapText="true" AnchorPane.bottomAnchor="84.0" AnchorPane.topAnchor="106.0" />
+                <Label layoutX="96.0" layoutY="36.0" text="Element" />
+                <TextField fx:id="elementTextField" disable="false" focusTraversable="false" layoutX="151.0" layoutY="36.0" prefWidth="153.0">
+                  <effect>
+                    <Reflection />
+                  </effect>
+                </TextField>
+                <Label fx:id="label" layoutX="96.0" layoutY="79.0" prefWidth="414.0" text="" />
+                <CheckBox fx:id="checkBox" allowIndeterminate="false" focusTraversable="false" layoutX="428.0" layoutY="36.0" mnemonicParsing="false" onAction="#checkBoxAction" selected="true" text="Auto Element" underline="false" visible="true" />
+                <Accordion expandedPane="$null" layoutX="216.0" layoutY="0.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="     Sorting     ">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <BarChart fx:id="barChart" prefHeight="360.0" prefWidth="426.0" title="" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="0.0">
+                  <xAxis>
+                    <CategoryAxis side="BOTTOM" />
+                  </xAxis>
+                  <yAxis>
+                    <NumberAxis side="LEFT" />
+                  </yAxis>
+                </BarChart>
+                <PieChart id="PieChart" fx:id="pieChart" prefHeight="360.0" prefWidth="521.999970703125" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="0.0" />
+                <Button id="chartButton" fx:id="sortButton" layoutY="134.0" mnemonicParsing="false" onAction="#sortAnalysis" prefWidth="57.0" styleClass="chartButton" text="Sort" AnchorPane.rightAnchor="35.0" />
+                <ComboBox fx:id="comboBox" focusTraversable="false" layoutY="54.0" prefHeight="21.0" prefWidth="80.0" styleClass="button" AnchorPane.rightAnchor="24.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <TextField id="spinTextBox" fx:id="arrayLenghtTextField" layoutY="96.0" prefWidth="80.0" AnchorPane.rightAnchor="24.0" />
+                <Label layoutY="98.0" text="Array Lenght" AnchorPane.rightAnchor="112.0" />
+                <Label layoutY="56.0" text="Chart Type" AnchorPane.rightAnchor="112.0" />
+              </children>
+              <stylesheets>
+                <URL value="@styles.css" />
+              </stylesheets>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="       Tree       ">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
+              <children>
+                <SplitPane dividerPositions="0.8296089385474861" focusTraversable="true" orientation="VERTICAL" prefHeight="360.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <items>
+                    <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                      <content>
+                        <AnchorPane id="Content" fx:id="treeAnchorPane" minHeight="150.0" minWidth="594.0" />
+                      </content>
+                    </ScrollPane>
+                    <AnchorPane fx:id="treeAnchorPane2" maxHeight="200.0" minHeight="0.0" minWidth="0.0" prefHeight="199.99990000000253" prefWidth="598.0">
+                      <children>
+                        <TextArea fx:id="textArea2" prefHeight="113.0" prefWidth="447.9999000000025" wrapText="true" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
+                        <TextField fx:id="treeTextField" layoutX="176.0" prefWidth="71.0" AnchorPane.bottomAnchor="25.0" />
+                        <Button fx:id="insertTreeButton" layoutX="259.0" mnemonicParsing="false" onAction="#insertTreeNode" prefWidth="55.0" text="Insert" AnchorPane.bottomAnchor="26.0" />
+                        <CheckBox fx:id="treeCheckBox" focusTraversable="false" layoutX="75.0" minHeight="13.0" mnemonicParsing="false" prefHeight="13.0" selected="true" text="Auto Element" wrapText="false" AnchorPane.bottomAnchor="30.0" />
+                        <Button layoutX="391.0" mnemonicParsing="false" onAction="#treeOrder" prefWidth="54.0001220703125" text="Order" AnchorPane.bottomAnchor="26.0" />
+                        <ComboBox fx:id="orderComboBox" layoutX="452.0" styleClass="button" AnchorPane.bottomAnchor="26.0">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                        <Button layoutX="324.0" mnemonicParsing="false" onAction="#deleteTree" prefWidth="55.0" text="Delete" AnchorPane.bottomAnchor="26.0" />
+                      </children>
+                    </AnchorPane>
+                  </items>
+                </SplitPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <Button fx:id="closeButton" blendMode="EXCLUSION" cancelButton="false" defaultButton="false" disable="false" focusTraversable="false" layoutY="4.0" minHeight="21.0" minWidth="21.9998779296875" mnemonicParsing="false" mouseTransparent="false" onAction="#closeAction" opacity="1.0" pickOnBounds="true" prefHeight="21.0" prefWidth="21.999900000002526" text="" textAlignment="CENTER" textOverrun="ELLIPSIS" underline="false" visible="true" wrapText="false" AnchorPane.rightAnchor="3.0">
+      <effect>
+        <InnerShadow choke="0.5793650793650794" height="35.16666546038219" radius="17.083333031762216" width="35.16666666666667" />
+      </effect>
+      <graphic>
+        <ImageView id="x.png" fitHeight="21.0" fitWidth="24.0">
+          <image>
+            <Image url="@../images/x.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+  </children>
+  <stylesheets>
+    <URL value="@styles.css" />
+  </stylesheets>
+</AnchorPane>

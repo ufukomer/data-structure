@@ -1,0 +1,40 @@
+.button{
+    -fx-background-radius:10;
+}
+
+.circle {
+
+    -fx-fill  : linear-gradient(from 50% 0% to 50% 100%,
+
+                                rgb(150, 145, 145) 0%,
+
+                                rgb(73, 46, 46) 100%);
+
+    -fx-stroke: transparent;
+
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.65), 10, 0.5, 0.0, 0.0);
+
+    -fx-effect: innershadow(gaussian, rgba(1, 1, 1, 0.65), 10, 0.5, 0.0, 5.0);
+
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.65), 10, 0.5, 0.0, -5.0);
+
+}
+
+.rootPane {
+
+  -fx-border-insets: 23;
+
+  -fx-background-insets: 23;
+
+  -fx-background-radius: 6;
+
+  -fx-border-radius: 6;
+
+  -fx-border-color: gray;
+
+  -fx-border-style: solid;
+
+  -fx-border-width: 1;
+
+  -fx-effect: dropshadow(three-pass-box, rgba(100, 100, 100, 1), 24, 0.5, 0, 0);
+}
