@@ -5,7 +5,7 @@ A university project created using JavaFX software platform. To have an idea abo
 Simple linked queue structure in which all nodes has a process time.
 
 #### Sorting Algorithm Analysis
-Program generates array of integers according to input then sort this array with Bitonic, Counting, Heap, Radix, Merge and Shell sort algorithms. At the end, shows analysis result on pie and bar charts.
+Program generates array of integers according to input then sort this array with Bitonic, Counting, Heap, Radix, Merge and Shell sort algorithms. At the end, compares the sorting speeds and shows analysis result on pie and bar charts.
 
 ![charts](src/images/docs/charts.png)
 
