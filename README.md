@@ -14,8 +14,6 @@ Program generates array of integers then fill tree with those integer numbers.
 
 ![unbalanced-tree](src/images/docs/unbalanced_tree.png)
 
----
-
 #### Flowchart
 
 ![flowchart](src/images/docs/flowchart.jpg)
