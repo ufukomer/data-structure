@@ -1,5 +1,5 @@
 ### Data Structure — Queue, Tree, Sorting Algorithm Speed Analysis
-A university project created using JavaFX software platform. To have an idea about the project content, read below.
+A university project created using JavaFX software platform. To have an idea about the project content read below.
 
 #### Linked Queue
 Simple linked queue structure in which all nodes has a process time.
