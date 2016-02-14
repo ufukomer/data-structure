@@ -10,7 +10,7 @@ Program generates array of integers according to input then sort this array with
 ![charts](src/images/docs/charts.png)
 
 #### Binary Tree
-Program generates array of integers then fill tree with those integer numbers.
+Program generates array of integers then fills the tree with those integer numbers.
 
 ![unbalanced-tree](src/images/docs/unbalanced_tree.png)
 
